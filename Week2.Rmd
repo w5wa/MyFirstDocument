@@ -1,0 +1,185 @@
+---
+title: "Week 2 Markdown"
+author: "Wael Hadi"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+******************************************
+* The following text is provided
+* for easier cutting and pasting as you
+* work through the exercises in
+* Module 2 - lesson 2: R Markdown Syntax
+******************************************
+
+# This is a level 1 header
+
+### This is a level 3 header
+
+Here is a link to [GOOGLE](https://www.google.com/)
+
+Here is a word in **bold** and another word in __bold__.
+
+Here is a word in *italics* and another word in _italics_.
+
+When we compile our document, we are using the `rmarkdown` package.
+
+Here are some example R commands:
+
+```
+2+2
+mean(c(1,2,3,4,5))
+```
+
+
+Here is an example of a non-numbered list:
+
+* Breakfast
+    - food
+        + eggs
+        + toast
+        + bacon
+    - drink
+        + apple juice
+* Lunch
+    - taco
+* Dinner
+    - baked chicken
+    - broccoli
+    - rice
+
+
+Here is an example of a numbered list:
+
+1. Breakfast
+    a. food
+        i. eggs
+        ii. toast
+        iii. bacon
+    b. drink
+        i. apple juice
+2. Lunch
+    a. taco
+3. Dinner
+    a. baked chicken
+    b. broccoli
+    c. rice
+
+
+Here is an example of a blockquote:
+
+> This is a block quote. This
+> paragraph has two lines.
+>
+> 1. This is a list inside a block quote.
+> 2. Second item.
+
+
+Here is an example of a nested blockquote:
+
+> This is a block quote. This
+> paragraph has two lines.
+>
+> > This text is nested
+
+
+Here is an example of code in a blockquote:
+
+>     2+2
+>     mean(c(1,2,3,4,5))
+
+
+
+Hyper
+
+******************************************
+* The following text is provided
+* for easier cutting and pasting as you
+* work through the exercises in
+* Module 2 - lesson 4: Images, Video
+* and Footnotes
+******************************************
+
+## Insert Images
+
+Here is an image inserted
+
+![sunstar](sunstar.png)
+
+
+Here is the R logo
+
+![r logo](https://www.r-project.org/logo/Rlogo.svg)
+
+
+## Insert an Animated GIF and Video
+
+![sunstar](sunstar/sunstar.gif)
+
+![sunstar](sunstar/sunstar.mp4)
+
+
+## Insert text with some footnotes
+
+Here is a footnote reference [^1] and another [^longnote]
+
+Here is an inline footnote ^[Inlines notes are easier to write, since you don't have to pick an identifier and move down to type the note.]
+
+[^1]: Here is the footnote.
+[^longnote]: Here's one with multiple blocks.
+
+
+
+******************************************
+* The following text is provided
+* for easier cutting and pasting as you
+* work through the exercises in
+* Module 2 - lesson 5: Presentation Formats
+******************************************
+
+## A slide with an inserted image
+
+Here is an image inserted
+
+![sunstar](sunstar.png)
+
+
+## A slide with a table
+
+```{r}
+knitr::kable(head(cars),
+             caption = "Top 6 Rows of Cars Dataset")
+```
+
+
+## A slide with an equation
+
+A simple linear regression equation
+
+$$ Y = \beta_0 + \beta_1x $$
+
+
+## A slide with an inserted image {.flexbox .vcenter}
+
+
+## A slide with 2 columns an image and a bulleted list {.columns-2}
+
+![](sunstar.png)
+
+- bullet 1
+- bullet 2
+- bullet 3
+
+######### My extras
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
